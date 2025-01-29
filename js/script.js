@@ -336,7 +336,7 @@ $(document).ready(function() {
 	// 07. COUNTDOWN
 	//===================================================================================
 	var theday = new Date();
-	theday = new Date(2025, 4, 12);
+	theday = new Date(2025, 4, 12, 12);
 	$('#countdown').countdown({until: theday, format: 'WDHMS'});
 	$('#countdown').countdown($.countdown.regionalOptions['custom-label']); 
 		 
@@ -699,14 +699,51 @@ $(document).ready(function() {
 	});
 	
 	// 카카오맵
-	kakao.maps.load(function() {
-        var container = document.getElementById('map-canvas');
-        var options = {
-            center: new kakao.maps.LatLng(33.450701, 126.570667),
-            level: 3
-        };
+	// kakao.maps.load(function() {
+    //     var container = document.getElementById('map-canvas');
+    //     var options = {
+    //         center: new kakao.maps.LatLng(37.490625, 126.7101066),
+    //         level: 3
+    //     };
 
-        var map = new kakao.maps.Map(container, options);
-    });
+    //     var map = new kakao.maps.Map(container, options);
+
+	// 	// 마커가 표시될 위치입니다 
+	// 	var markerPosition  = new kakao.maps.LatLng(37.490625, 126.7101066); 
+
+	// 	// 마커를 생성합니다
+	// 	var marker = new kakao.maps.Marker({
+	// 		position: markerPosition
+	// 	});
+
+	// 	marker.setMap(map);
+    // });
+	
 });
-	 
+
+document.querySelectorAll('.copy-btn').forEach(function(button) {
+	button.addEventListener('click', function(event) {
+		event.preventDefault(); // 링크 클릭으로 인한 페이지 이동 방지
+	});
+});
+
+// 클립보드 복사 기능을 위한 clipboard.js 초기화
+var clipboard = new ClipboardJS('.copy-btn');
+
+ // 복사 성공 시 커스텀 알림 표시
+ clipboard.on('success', function(e) {
+	var alertBox = document.getElementById('custom-alert');
+	alertBox.style.display = 'block';  // 알림창 표시
+	
+	// 알림창을 2초 뒤에 자동으로 숨기기
+	setTimeout(function() {
+		alertBox.style.display = 'none';
+	}, 2000);
+	
+	//e.clearSelection(); // 선택 해제
+});
+
+// 복사 실패 시 알림
+clipboard.on('error', function(e) {
+    alert('복사에 실패했습니다. 키보드 단축키를 사용해 보세요.');
+});
