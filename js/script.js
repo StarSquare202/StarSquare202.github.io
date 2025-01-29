@@ -725,7 +725,7 @@ $(document).ready(function() {
             <div class="desc">인천 부평구 경원대로 1277 2001아울렛 5층</div>
         </div>
 		`
-		iwPosition = new kakao.maps.kakao.maps.LatLng(37.490625, 126.7101066); //인포윈도우 표시 위치입니다
+		iwPosition = new kakao.maps.LatLng(37.490625, 126.7101066); //인포윈도우 표시 위치입니다
 
 		// 인포윈도우를 생성합니다
 		var infowindow = new kakao.maps.InfoWindow({
