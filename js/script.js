@@ -718,13 +718,21 @@ $(document).ready(function() {
 
 		marker.setMap(map);
 
-		// <div style="padding:5px;">라페니체웨딩홀 <br><a href="https://map.kakao.com/link/map/20707258" style="color:blue" target="_blank">큰지도보기</a> <a href="https://map.kakao.com/link/to/20707258" style="color:blue" target="_blank">길찾기</a></div>
 		var iwContent = `
-		<div class="customoverlay" onclick="window.open('https://map.kakao.com/link/map/20707258', '_blank')">
-            <div class="title">라페니체웨딩홀</div>
-            <div class="desc">인천 부평구 경원대로 1277 2001아울렛 5층</div>
+    	<div class="customoverlay" onclick="window.open('https://map.kakao.com/link/map/20707258', '_blank')"
+        style="background: #fff; padding: 12px 15px; border-radius: 10px; box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2); 
+        text-align: center; font-family: Arial, sans-serif; font-size: 14px; cursor: pointer; max-width: 250px; 
+        border: 1px solid #ddd;">
+        
+        <div class="title hangul-bold" style="font-size: 16px; font-weight: bold; color: #333; margin-bottom: 5px;">
+            라페니체웨딩홀
         </div>
-		`
+        
+        <div class="desc hangul" style="color: #666; font-size: 13px;">
+            인천 부평구 경원대로 1277 2001아울렛 5층
+        </div>
+    </div>
+`;
 		var iwPosition = new kakao.maps.LatLng(37.490625, 126.7101066); //인포윈도우 표시 위치입니다
 
 		// 인포윈도우를 생성합니다
