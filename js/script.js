@@ -336,7 +336,7 @@ $(document).ready(function() {
 	// 07. COUNTDOWN
 	//===================================================================================
 	var theday = new Date();
-	theday = new Date(2015, 7, 12);
+	theday = new Date(2025, 4, 12);
 	$('#countdown').countdown({until: theday, format: 'WDHMS'});
 	$('#countdown').countdown($.countdown.regionalOptions['custom-label']); 
 		 
@@ -698,5 +698,15 @@ $(document).ready(function() {
 		}
 	});
 	
+	// 카카오맵
+	kakao.maps.load(function() {
+        var container = document.getElementById('map-canvas');
+        var options = {
+            center: new kakao.maps.LatLng(33.450701, 126.570667),
+            level: 3
+        };
+
+        var map = new kakao.maps.Map(container, options);
+    });
 });
 	 

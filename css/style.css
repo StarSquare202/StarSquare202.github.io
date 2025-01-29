@@ -261,6 +261,23 @@ h4.inline, h5.inline, h6.inline{
 	vertical-align:middle; 
 }
 
+@font-face {
+    font-family: 'GowunDodum-Regular';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/GowunDodum-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.hangul {
+    font-family: 'GowunDodum-Regular', 'Arial', sans-serif;
+}
+
+.hangul-bold {
+    font-family: 'GowunDodum-Regular', 'Arial', sans-serif;
+	font-weight: bold;
+    /* text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.2); */
+}
+
 p{
 	font-family: 'Arvo', serif;	
 	font-size:15px;
