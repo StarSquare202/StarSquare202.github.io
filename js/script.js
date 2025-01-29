@@ -719,7 +719,7 @@ $(document).ready(function() {
 		marker.setMap(map);
 
 		var iwContent = `
-    	<div class="customoverlay" onclick="window.open('https://map.kakao.com/link/map/20707258', '_blank')"
+    	<div onclick="window.open('https://map.kakao.com/link/map/20707258', '_blank')"
         style="background: #fff; padding: 12px 15px; border-radius: 10px; box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2); 
         text-align: center; font-family: Arial, sans-serif; font-size: 14px; cursor: pointer; max-width: 250px; 
         border: 1px solid #ddd;">
@@ -729,7 +729,7 @@ $(document).ready(function() {
         </div>
         
         <div class="desc hangul" style="color: #666; font-size: 13px;">
-            인천 부평구 경원대로 1277 2001아울렛 5층
+            인천 부평구 경원대로 1277<br>2001아울렛 5층
         </div>
     </div>
 `;
