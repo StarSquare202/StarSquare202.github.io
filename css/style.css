@@ -3739,3 +3739,47 @@ footer .image-divider.fixed-height{
 	margin-top:10px;
 }
 }
+
+ /* 커스텀 오버레이 스타일 */
+ .customoverlay {
+	position: relative;
+	background: white;
+	border-radius: 10px;
+	padding: 10px 15px;
+	box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+	font-size: 14px;
+	max-width: 250px;
+	text-align: center;
+}
+
+.customoverlay::after {
+	content: "";
+	position: absolute;
+	bottom: -10px;
+	left: 50%;
+	transform: translateX(-50%);
+	border-width: 10px;
+	border-style: solid;
+	border-color: white transparent transparent transparent;
+}
+
+.customoverlay .title {
+	font-weight: bold;
+	color: #333;
+	font-size: 16px;
+	margin-bottom: 5px;
+}
+
+.customoverlay .desc {
+	color: #666;
+	font-size: 13px;
+}
+
+.customoverlay .close {
+	position: absolute;
+	top: 5px;
+	right: 10px;
+	cursor: pointer;
+	color: red;
+	font-weight: bold;
+}

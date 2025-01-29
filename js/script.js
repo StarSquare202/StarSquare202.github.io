@@ -717,6 +717,25 @@ $(document).ready(function() {
 		});
 
 		marker.setMap(map);
+
+		// <div style="padding:5px;">라페니체웨딩홀 <br><a href="https://map.kakao.com/link/map/20707258" style="color:blue" target="_blank">큰지도보기</a> <a href="https://map.kakao.com/link/to/20707258" style="color:blue" target="_blank">길찾기</a></div>
+		var iwContent = `
+		<div class="customoverlay">
+            <div class="title">라페니체웨딩홀</div>
+            <div class="desc">인천 부평구 경원대로 1277 2001아울렛 5층</div>
+        </div>
+		`
+		iwPosition = new kakao.maps.kakao.maps.LatLng(37.490625, 126.7101066); //인포윈도우 표시 위치입니다
+
+		// 인포윈도우를 생성합니다
+		var infowindow = new kakao.maps.InfoWindow({
+		position : iwPosition, 
+		content : iwContent 
+		});
+
+		// 마커 위에 인포윈도우를 표시합니다. 두번째 파라미터인 marker를 넣어주지 않으면 지도 위에 표시됩니다
+		infowindow.open(map, marker); 
+
     });
 	
 });
