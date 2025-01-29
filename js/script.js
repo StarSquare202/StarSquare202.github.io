@@ -699,25 +699,25 @@ $(document).ready(function() {
 	});
 	
 	// 카카오맵
-	// kakao.maps.load(function() {
-    //     var container = document.getElementById('map-canvas');
-    //     var options = {
-    //         center: new kakao.maps.LatLng(37.490625, 126.7101066),
-    //         level: 3
-    //     };
+	kakao.maps.load(function() {
+        var container = document.getElementById('map-canvas');
+        var options = {
+            center: new kakao.maps.LatLng(37.490625, 126.7101066),
+            level: 3
+        };
 
-    //     var map = new kakao.maps.Map(container, options);
+        var map = new kakao.maps.Map(container, options);
 
-	// 	// 마커가 표시될 위치입니다 
-	// 	var markerPosition  = new kakao.maps.LatLng(37.490625, 126.7101066); 
+		// 마커가 표시될 위치입니다 
+		var markerPosition  = new kakao.maps.LatLng(37.490625, 126.7101066); 
 
-	// 	// 마커를 생성합니다
-	// 	var marker = new kakao.maps.Marker({
-	// 		position: markerPosition
-	// 	});
+		// 마커를 생성합니다
+		var marker = new kakao.maps.Marker({
+			position: markerPosition
+		});
 
-	// 	marker.setMap(map);
-    // });
+		marker.setMap(map);
+    });
 	
 });
 
